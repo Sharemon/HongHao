@@ -1,0 +1,19 @@
+10 DIM Rdgs(1:5)
+20 ASSIGN @Dmm TO 722
+21 ON TIMEOUT 7,2 GOTO Timeouterror
+30 CLEAR 7 ! Clear HP-IB and dmm
+40 OUTPUT @Dmm;"*RST"  ! Reset dmm
+50 OUTPUT @Dmm;"*CLS"  ! Clear dmm status registers
+60 OUTPUT @Dmm;"CALC:DBM:REF 50"  ! 50 ohm reference resistance
+70 OUTPUT @Dmm;"CONF:VOLT:AC 1,0.001"  ! Set dmm to 1 amp ac range
+80 OUTPUT @Dmm;"DET:BAND 200"  ! Select 200 Hz (fast) ac filter
+90 OUTPUT @Dmm;"TRIG:COUN 5"  ! Dmm will accept 5 triggers
+100 OUTPUT @Dmm;"TRIG:SOUR IMM"  ! Trigger source is IMMediate
+110 OUTPUT @Dmm;"CALC:FUNC DBM"  ! Select dBm function
+120 OUTPUT @Dmm;"CALC:STAT ON"  ! Enable math
+130 OUTPUT @Dmm;"READ?"  ! Take readings; send to output buffer
+140 ENTER @Dmm;Rdgs(*)
+150 PRINT USING "K,/";Rdgs(*)
+151 STOP
+153 Timeouterror: DISP "Timeout occured."
+160 END

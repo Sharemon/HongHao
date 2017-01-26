@@ -1,0 +1,46 @@
+CLS
+LOCATE 1, 1
+DIM cmd$(100), resp$(1000)
+
+
+'Set up serial port for 9600 baud, even parity, 7 bits;
+'Ignore Request to Send Carrier Detect; Send line feed; 
+'enable parity check, reserve 1000 bytes for input buffer 
+
+
+OPEN "coml:9600,e,7,2,rs,cd,lf,pe" FOR RANDOM AS #1 LEN = 1000
+
+' Put the meter into remote operation mode
+PRINT #1, "SYST:REM"
+
+
+Query the meter's id string 
+PRINT #1, "*ILN?" 
+
+
+LINE INPUT #1, resp$
+PRINT "*IDN? returned: ", resp$
+' Get the SCPI revision number
+
+
+PRINT #1, "SYST:VERS?" 
+
+
+LINE INPUT #1, resp$
+PRTNT "SYST:VERS returned: ", resp$
+'
+' Send a message to the meter's display
+PRINT #1, "DISP:TEXT 'HP 34420A' "
+'Configure the meter for dc voltage measurements, 10 V range,
+' 0.1 V resolution, take 4 readings
+PRINT #1, "CONF:VOLT:DC 10, 0.1, ;:SAMP:COUN 4"
+' Trigger the readings and get the results
+
+
+PR1NT #1, "READ?" 
+
+
+LINE lNPUT #1, resp$
+PRINT "READ? returned: n I resp$
+END
+

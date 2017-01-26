@@ -1,0 +1,9 @@
+F:\project\c#\str2bin2\str2bin\str2bin\bin\Release\str2bin.exe
+F:\project\c#\str2bin2\str2bin\str2bin\bin\Release\str2bin.pdb
+F:\project\c#\str2bin2\str2bin\str2bin\obj\x86\Release\str2bin.Form1.resources
+F:\project\c#\str2bin2\str2bin\str2bin\obj\x86\Release\str2bin.Properties.Resources.resources
+F:\project\c#\str2bin2\str2bin\str2bin\obj\x86\Release\str2bin.csproj.GenerateResource.Cache
+F:\project\c#\str2bin2\str2bin\str2bin\obj\x86\Release\str2bin.exe
+F:\project\c#\str2bin2\str2bin\str2bin\obj\x86\Release\str2bin.pdb
+F:\project\c#\str2bin2\str2bin\str2bin\bin\Release\str2bin.exe.config
+F:\project\c#\str2bin2\str2bin\str2bin\obj\x86\Release\str2bin.csprojResolveAssemblyReference.cache

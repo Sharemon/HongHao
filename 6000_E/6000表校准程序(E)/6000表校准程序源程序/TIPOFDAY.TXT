@@ -1,0 +1,3 @@
+安捷伦LAN方式连接时IP地址设置方法：仪器面板Shift→Utility→RemoteI/O→Lan→Enable LAN(选择Yes)→Lan Settings(选择Modify)→ResetLAN(选择NO)→DHCP(选择OFF)→Auto IP(选择OFF)→输入IP地址(169.254.4.10)→Enter……
+本程序可根据使用需要进行自定义设定，既可在程序运行时设定，也可以修改安装目录下Configuration文件夹里的设定！
+如有疑问请发送电子邮件到515652128@qq.com。

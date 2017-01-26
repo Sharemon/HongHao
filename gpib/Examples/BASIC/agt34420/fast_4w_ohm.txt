@@ -1,0 +1,28 @@
+1     ! This program will configure the HP 34420A for fast four 
+2     ! wire ohm measurements.            CLD  12 March 1996
+10    ASSIGN @Nvm TO 722                ! assign I/O path to address 722 
+20    DIM Rdgs(1:500)                   ! dimension array
+30    OUTPUT @Nvm;"*RST"                ! reset the meter
+40    OUTPUT @Nvm;"CONF:FRES 10,DEF"    ! configure for range, resolution 
+50    OUTPUT @Nvm;"FRES:NPLC 0.02"      ! set integration time
+60    OUTPUT @Nvm;"FRES:OCOM OFF"       ! turn offset compensation off 
+70    OUTPUT @Nvm;"TRIG:DEL 0"          ! set minimum trigger delay
+80    OUTPUT @Nvm;"OUTP:STAT OFF"       ! turn chart out off 
+90    OUTPUT @Nvm;"INP:FILT:STAT OFF"   ! turn filters off 
+100   OUTPUT @Nvm;"TRIG:COUN 500"       ! accept 500 triggers
+110   OUTPUT @Nvm;"TRIG:SOUR IMM"       ! select immediate trigger source 
+120   OUTPUT @Nvm;"DISP:STAT OFF"       ! turn display off
+130   OUTPUT @Nvm;"*OPC?"               ! send "1" to buffer when complete 
+140   ENTER @Nvm;I                      ! read value from bus
+150   Begi=TIMEDATE                     ! begin timing
+160   OUTPUT @Nvm;"INIT"                ! initiate measurement
+170   OUTPUT @Nvm;"*OPC?"               ! send "1" to buffer when complete 
+180   ENTER @Nvm;I                      ! read value from bus
+190   Fini=TIMEDATE                     ! finished timing
+200   OUTPUT @Nvm;"FETCH?"              ! transfer readings to output buffer 
+210   ENTER @Nvm;Rdgs(*)                ! read values from bus
+220   PRINT "TIME FOR 500 READINGS:  ";Fini-Begi;" seconds"
+230   PRINT "READING RATE:  ";500/(Fini-Begi);" readings/second" 
+240   END
+
+

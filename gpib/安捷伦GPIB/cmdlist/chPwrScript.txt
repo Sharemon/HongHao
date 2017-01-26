@@ -1,0 +1,74 @@
+[DEVICE:E4404B]
+
+[Channel power measurement setup]
+*CLS
+*RST
+:DISP:ENAB on
+:CONF:CHP
+:CHP:AVER:COUNT 10
+:SWE:TIME 10 MS
+:INIT:CONT ON
+:SENS:FREQ:CENT 1000 MHZ
+:SENS:CHP:BAND:INT 40 MHZ
+:SENS:CHP:FREQ:SPAN 50 MHZ
+[Channel power measurement setup-0]
+:DISP:ENAB ON
+#:POW:RANG:AUTO ONCE
+*WAI
+:READ:CHPower?
+#:DISP:ENAB ON
+
+[Channel power measurement result read]
+:INIT:REST
+:FETC:CHP?
+#:DISP:ENAB ON
+
+
+[Channel 1G measurement]
+*CLS
+*RST
+:SENS:FREQ:CENT 1000 MHZ
+:SENS:FREQ:SPAN 100 MHZ
+:DISP:wind:trac:y:scal:rlev -20 dbm
+[Channel 1G result read-0]
+:CALC:MARK1:MAX
+*WAI
+:CALC:MARK1:Y?
+[Channel 1G result read-1]
+:CALC:MARK1:X?
+
+[Channel full measurement]
+*CLS
+*RST
+#:SENS:FREQ:CENT 1000 MHZ
+:SENS:FREQ:STAR 100 MHZ
+:SENS:FREQ:STOP 67000 MHZ
+#:SENS:FREQ:SPAN 2 GHZ
+[Channel FULL result read-0]
+:CALC:MARK1:MAX
+*WAI
+:CALC:MARK1:Y?
+[Channel FULL result read-1]
+:CALC:MARK1:X?
+
+[D-TV test]
+*CLS
+*RST
+:DISP:ENAB ON
+:INST:SEL SA
+:INIT:CONT OFF
+:DISP:wind:trac:y:scal:rlev -80 dbm
+#:SENS:FREQ:STAR 30 MHZ
+#:SENS:FREQ:STOP 900 MHZ
+:SENS:FREQ:CENT 182 MHz
+:SENS:FREQ:SPAN 10 MHz
+:BAND:AUTO 0
+:BAND 1KHz
+:INIT:IMM
+[d-tv result read-0]
+:DISP:wind:trac:y:scal:rlev 10dbm
+:CALC:MARK1:max
+*WAI
+:CALC:MARK1:Y?
+[d-tv result read-1]
+:CALC:MARK1:x?

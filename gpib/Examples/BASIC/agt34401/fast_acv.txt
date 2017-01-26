@@ -1,0 +1,55 @@
+10    !
+20    !
+30    ! The following program can be used to make ACV readings
+31    ! at > 350 rdgs/sec using the HP 34401A.
+32    !
+40    ! b.g. 5/1/91
+50    !
+60    !
+70    OPTION BASE 1
+80    Nrdgs=512
+90    ALLOCATE Rdgs(Nrdgs)
+100   !
+110   ASSIGN @Dvm TO 723
+120   !
+130   !
+140   !
+150   CLEAR @Dvm
+160   OUTPUT @Dvm;"*RST"
+170   OUTPUT @Dvm;"DISP OFF"
+180   OUTPUT @Dvm;"CONF:VOLT:AC 10,MAX"
+190   OUTPUT @Dvm;"TRIG:DEL MIN"
+200   OUTPUT @Dvm;"TRIG:SOUR IMM"
+201   WAIT 2                          ! SWALLOW COMMANDS
+210   !
+220   ! DETERMINE OVERHEAD FOR SINGLE READING
+230   !
+240   OUTPUT @Dvm;"TRIG:COUN 1"
+250   T0=TIMEDATE
+260   OUTPUT @Dvm;"INIT;*OPC?"
+270   ENTER @Dvm;Tmp$
+280   T1=TIMEDATE
+290   OUTPUT @Dvm;"FETCH?"
+300   ENTER @Dvm;Rdg
+310   !
+320   ! MAKE LOTS OF RDGS
+330   !
+340   OUTPUT @Dvm;"TRIG:COUN";Nrdgs
+350   T2=TIMEDATE
+360   OUTPUT @Dvm;"INIT;*OPC?"
+370   ENTER @Dvm;Tmp$
+380   T3=TIMEDATE
+390   OUTPUT @Dvm;"FETCH?"
+400   ENTER @Dvm;Rdgs(*)
+410   !
+420   ! PRINT RESULTS
+430   !
+435   PRINT "TIME FOR ONE RDG: ";(T1-T0)
+440   PRINT "TIME FOR: ";Nrdgs;"RDGS: ";(T3-T2)
+450   PRINT "READING RATE: ";(Nrdgs-1)/((T3-T2)-(T1-T0))
+460   PRINT 
+470   FOR I=1 TO 10
+480    PRINT I,Rdgs(I)
+490   NEXT I
+500   END
+

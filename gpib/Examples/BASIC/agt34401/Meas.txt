@@ -1,0 +1,12 @@
+10 REAL Rdg
+11 ON TIMEOUT 7,2 GOTO Timeouterror
+20 ASSIGN @Dmm TO 722
+30 CLEAR 7 ! Clear HP-IB and dmm
+40 OUTPUT @Dmm;"*RST"  ! Reset dmm
+50 OUTPUT @Dmm;"*CLS"  ! Clear dmm status registers
+60 OUTPUT @Dmm;"MEASURE:CURRENT:AC? 1A,0.001MA"  ! Set to 1 amp ac range
+70 ENTER @Dmm;Rdg
+80 PRINT Rdg
+81 STOP
+82 Timeouterror: DISP "Timeout occured."
+90 END

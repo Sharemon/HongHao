@@ -1,0 +1,621 @@
+[Root]
+Most Recent Package=6000DDM Calitor Setup
+
+
+[Package|标准安装软件包 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\My Document\Agilent\Agilent Connection Tool New\包
+
+[Package|标准安装软件包 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|标准安装软件包 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|标准安装软件包 1|Files Found]
+
+[Package|标准安装软件包 1|Files Released]
+
+[Package|标准安装软件包 1|Missing Dependency Information]
+
+[Package|标准安装软件包 1|Out-of-Date Dependency Information]
+
+[Package|标准安装软件包 1|Files Added]
+
+[Package|标准安装软件包 1|Files Removed]
+
+[Package|标准安装软件包 1|Files In Project]
+D:\My Document\Agilent\Agilent Connection Tool New\ACTool.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\VB6CHS.DLL=Yes
+C:\Windows\System32\ws2_32.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|标准安装软件包 1|Configure Registry Files]
+Applicable=No
+
+[Package|标准安装软件包 1|Configure Remote Servers]
+Applicable=No
+
+[Package|标准安装软件包 1|Install Locations]
+D:\My Document\Agilent\Agilent Connection Tool New\ACTool.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB6CHS.DLL=$(WinSysPath)
+C:\Windows\System32\ws2_32.dll=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|标准安装软件包 1|Configure Shared Files]
+Applicable=Yes
+D:\My Document\Agilent\Agilent Connection Tool New\ACTool.exe=Yes
+
+[Package|标准安装软件包 1|Distribution]
+Type=single
+Size=
+Title=ACTool
+
+[Package|标准安装软件包 1|IconGroups]
+Group0=ACTool
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|标准安装软件包 1|ACTool]
+Icon1=ACTool.exe
+Title1=ACTool
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|标准安装软件包 1|Package]
+PackageFolder=D:\My Document\Agilent\Agilent Connection Tool New\包
+ProjectFolder=D:\My Document\Agilent\Agilent Connection Tool New
+ServerSideCab=
+File1=D:\My Document\Agilent\Agilent Connection Tool New\包\setup.exe
+File2=D:\My Document\Agilent\Agilent Connection Tool New\包\Setup.Lst
+File3=D:\My Document\Agilent\Agilent Connection Tool New\包\ACTool.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Agilent setup|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\agilent
+
+[Package|Agilent setup|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Agilent setup|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Agilent setup|Files Found]
+
+[Package|Agilent setup|Files Released]
+
+[Package|Agilent setup|Missing Dependency Information]
+C:\Documents and Settings\Administrator\桌面\Agilent\SkinH_VB6.dll=
+C:\WINDOWS\system32\ws2_32.dll=
+C:\Documents and Settings\Administrator\桌面\Agilent\Reboot.exe=
+
+[Package|Agilent setup|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+
+[Package|Agilent setup|Files Added]
+c:\documents and settings\administrator\桌面\agilent\themes\aero.she=
+c:\documents and settings\administrator\桌面\agilent\themes\china.she=
+c:\documents and settings\administrator\桌面\agilent\themes\longhorn.she=
+c:\documents and settings\administrator\桌面\agilent\reboot.exe=
+
+[Package|Agilent setup|Files Removed]
+
+[Package|Agilent setup|Files In Project]
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\VB6CHS.DLL=Yes
+C:\Windows\System32\ws2_32.dll=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\ACTool.exe=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\SkinH_VB6.dll=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\WINDOWS\system32\MSCOMCHS.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCMCCHS.DLL=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\aero.she=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\china.she=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\longhorn.she=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Reboot.exe=Yes
+C:\WINDOWS\system32\Comdlg32.ocx=Yes
+C:\WINDOWS\system32\CMDLGCHS.DLL=Yes
+
+[Package|Agilent setup|Configure Registry Files]
+Applicable=No
+
+[Package|Agilent setup|Configure Remote Servers]
+Applicable=No
+
+[Package|Agilent setup|Install Locations]
+D:\My Document\Agilent\Agilent Connection Tool New\ACTool.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB6CHS.DLL=$(WinSysPath)
+C:\Windows\System32\ws2_32.dll=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Administrator\桌面\Agilent\ACTool.exe=$(AppPath)
+C:\Documents and Settings\Administrator\桌面\Agilent\SkinH_VB6.dll=$(AppPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCHS.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\aero.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\china.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\longhorn.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\Agilent\Reboot.exe=$(AppPath)
+C:\WINDOWS\system32\Comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\CMDLGCHS.DLL=$(WinSysPath)
+
+[Package|Agilent setup|Configure Shared Files]
+Applicable=Yes
+D:\My Document\Agilent\Agilent Connection Tool New\ACTool.exe=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\ACTool.exe=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\SkinH_VB6.dll=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\aero.she=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\china.she=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Themes\longhorn.she=Yes
+C:\Documents and Settings\Administrator\桌面\Agilent\Reboot.exe=Yes
+
+[Package|Agilent setup|Distribution]
+Type=single
+Size=
+Title=ACTool
+
+[Package|Agilent setup|IconGroups]
+Group0=ACTool
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Agilent setup|ACTool]
+Icon1=ACTool.exe
+Title1=ACTool
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Agilent setup|Package]
+PackageFolder=D:\agilent
+ProjectFolder=C:\Documents and Settings\Administrator\桌面\Agilent
+ServerSideCab=
+File1=D:\agilent\setup.exe
+File2=D:\agilent\Setup.Lst
+File3=D:\agilent\ACTool.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|6000DDM Calitor Setup|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\包
+
+[Package|6000DDM Calitor Setup|Configure DAO ISAMs]
+Applicable=No
+
+[Package|6000DDM Calitor Setup|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|6000DDM Calitor Setup|Files Found]
+adamant.she=C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\adamant.she
+Config.ini=C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Config.ini
+LAN设置.txt=C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\LAN设置.txt
+
+[Package|6000DDM Calitor Setup|Files Released]
+
+[Package|6000DDM Calitor Setup|Missing Dependency Information]
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\SkinH_VB6.dll=
+C:\WINDOWS\system32\ws2_32.dll=
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Reboot.exe=
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Reboot.exe=
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\SkinH_VB6.dll=
+
+[Package|6000DDM Calitor Setup|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\Windows\System32\RICHTX32.OCX=
+C:\Windows\System32\COMDLG32.OCX=
+
+[Package|6000DDM Calitor Setup|Files Added]
+reboot.exe=
+adamant.she=
+aero.she=
+asus.she=
+black.she=
+china.she=
+compact.she=
+darkroyale.she=
+dogmax.she=
+elegance.she=
+enjoy.she=
+gem.she=
+hlong.she=
+homestead.she=
+insomnia.she=
+itunes.she=
+longhorn.she=
+msn.she=
+office2007.she=
+ouframe.she=
+pixos.she=
+qq2008.she=
+qq2009.she=
+qq2009_宽_底边.she=
+qq2009_窄_底边.she=
+qqgame.she=
+qq影音.she=
+real.she=
+royale.she=
+storm.she=
+vista.she=
+whitefire.she=
+wish.she=
+xenes.she=
+xmp.she=
+积木.she=
+炫绿.she=
+lan设置.txt=
+rs232端口设置.txt=
+按键代码.txt=
+量程段编号设置.txt=
+软件通用设置.txt=
+修正系数.txt=
+config.ini=
+tipofday.txt=
+
+[Package|6000DDM Calitor Setup|Files Removed]
+
+[Package|6000DDM Calitor Setup|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\WINDOWS\system32\vb6chs.dll=Yes
+C:\WINDOWS\system32\ws2_32.dll=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\WINDOWS\system32\MSCOMCHS.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCMCCHS.DLL=Yes
+C:\WINDOWS\system32\comdlg32.ocx=Yes
+C:\WINDOWS\system32\CMDLGCHS.DLL=Yes
+C:\WINDOWS\system32\RICHTX32.OCX=Yes
+C:\WINDOWS\system32\RCHTXCHS.DLL=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\6000DDM Calitor.exe=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\SkinH_VB6.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Reboot.exe=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\adamant.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\aero.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\asus.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\black.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\china.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\compact.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\darkroyale.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\dogmax.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\elegance.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\enjoy.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\gem.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\hlong.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\homestead.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\insomnia.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\itunes.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\longhorn.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\MSN.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\office2007.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\ouframe.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\pixos.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\qq2008.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009_宽_底边.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009_窄_底边.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\qqgame.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ影音.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\REAL.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\royale.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\storm.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\vista.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\whitefire.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\wish.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\Xenes.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\xmp.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\积木.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\炫绿.she=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\LAN设置.txt=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\RS232端口设置.txt=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\按键代码.txt=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\量程段编号设置.txt=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\软件通用设置.txt=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\修正系数.txt=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Config.ini=Yes
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\TIPOFDAY.TXT=Yes
+
+[Package|6000DDM Calitor Setup|Configure Registry Files]
+Applicable=No
+
+[Package|6000DDM Calitor Setup|Configure Remote Servers]
+Applicable=No
+
+[Package|6000DDM Calitor Setup|Install Locations]
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\6000DDM Calitor.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\vb6chs.dll=$(WinSysPath)
+C:\WINDOWS\system32\ws2_32.dll=$(WinSysPath)
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\SkinH_VB6.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCHS.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\CMDLGCHS.DLL=$(WinSysPath)
+C:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\RCHTXCHS.DLL=$(WinSysPath)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Reboot.exe=$(AppPath)
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\adamant.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\aero.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\asus.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\black.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\china.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\compact.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\darkroyale.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\dogmax.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\elegance.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\enjoy.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\gem.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\hlong.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\homestead.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\insomnia.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\itunes.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\longhorn.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\MSN.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\office2007.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\ouframe.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\pixos.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\qq2008.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ2009.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ2009_宽_底边.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ2009_窄_底边.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\qqgame.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ影音.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\REAL.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\royale.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\storm.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\vista.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\whitefire.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\wish.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\Xenes.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\xmp.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\积木.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\炫绿.she=$(AppPath)\Themes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\LAN设置.txt=$(AppPath)\Configuration
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\RS232端口设置.txt=$(AppPath)
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\按键代码.txt=$(AppPath)\Configuration
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\量程段编号设置.txt=$(AppPath)\Configuration
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\软件通用设置.txt=$(AppPath)\Configuration
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\修正系数.txt=$(AppPath)\Configuration
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Config.ini=$(AppPath)
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\TIPOFDAY.TXT=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\6000DDM Calitor.exe=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\SkinH_VB6.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\GAPI32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Reboot.exe=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\adamant.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\aero.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\asus.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\black.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\china.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\compact.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\darkroyale.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\dogmax.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\elegance.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\enjoy.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\gem.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\hlong.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\homestead.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\insomnia.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\itunes.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\longhorn.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\MSN.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\office2007.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\ouframe.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\pixos.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\qq2008.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009_宽_底边.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009_窄_底边.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\qqgame.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ影音.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\REAL.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\royale.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\storm.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\vista.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\whitefire.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\wish.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\Xenes.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\xmp.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\积木.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\炫绿.she=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\LAN设置.txt=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\RS232端口设置.txt=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\按键代码.txt=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\量程段编号设置.txt=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\软件通用设置.txt=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\修正系数.txt=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Config.ini=$(AppPath)
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\TIPOFDAY.TXT=$(AppPath)
+
+[Package|6000DDM Calitor Setup|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\6000DDM Calitor.exe=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Reboot.exe=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\adamant.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\aero.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\asus.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\black.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\china.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\compact.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\darkroyale.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\dogmax.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\elegance.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\enjoy.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\gem.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\hlong.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\homestead.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\insomnia.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\itunes.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\longhorn.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\MSN.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\office2007.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\ouframe.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\pixos.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\qq2008.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ2009.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ2009_宽_底边.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ2009_窄_底边.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\qqgame.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\QQ影音.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\REAL.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\royale.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\storm.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\vista.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\whitefire.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\wish.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\Xenes.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\xmp.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\积木.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Themes\炫绿.she=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\LAN设置.txt=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\RS232端口设置.txt=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\按键代码.txt=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\量程段编号设置.txt=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\软件通用设置.txt=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Configuration\修正系数.txt=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\Config.ini=No
+C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\TIPOFDAY.TXT=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\6000DDM Calitor.exe=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Reboot.exe=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\adamant.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\aero.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\asus.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\black.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\china.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\compact.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\darkroyale.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\dogmax.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\elegance.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\enjoy.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\gem.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\hlong.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\homestead.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\insomnia.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\itunes.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\longhorn.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\MSN.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\office2007.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\ouframe.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\pixos.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\qq2008.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009_宽_底边.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ2009_窄_底边.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\qqgame.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\QQ影音.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\REAL.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\royale.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\storm.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\vista.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\whitefire.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\wish.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\Xenes.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\xmp.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\积木.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Themes\炫绿.she=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\LAN设置.txt=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\RS232端口设置.txt=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\按键代码.txt=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\量程段编号设置.txt=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\软件通用设置.txt=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Configuration\修正系数.txt=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\Config.ini=No
+C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序\TIPOFDAY.TXT=No
+
+[Package|6000DDM Calitor Setup|Distribution]
+Type=single
+Size=
+Title=6000DDM Calitor Setup
+
+[Package|6000DDM Calitor Setup|IconGroups]
+Group0=6000DDM Calitor Setup
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|6000DDM Calitor Setup|6000DDM Calitor Setup]
+Icon1="6000DDM Calitor.exe"
+Title1=6000DDM Calitor Setup
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|6000DDM Calitor Setup|Package]
+PackageFolder=C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\包
+ProjectFolder=C:\Users\Administrator\Desktop\6000表校准程序(E)\6000表校准程序源程序
+ServerSideCab=
+File1=C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\包\setup.exe
+File2=C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\包\Setup.Lst
+File3=C:\Documents and Settings\Administrator\桌面\安捷伦 sp9\包\6000DDM Calitor.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

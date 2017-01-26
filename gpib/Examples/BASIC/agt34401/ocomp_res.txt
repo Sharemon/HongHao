@@ -1,0 +1,193 @@
+10    !
+20    !
+30    ! The following program will make offset compensated
+40    ! resistance measurements using the 34401A DVM.  Since,
+50    ! the 34401A does not have OCOMP built in the program
+60    ! uses low level DIAG:POKEs to enable and disable the
+70    ! current source hardware.  In order for this procedure
+80    ! to work:
+90    !        ** The firmware must be rev 03-01-01
+100   !        ** The measurement must be a four wire measurement
+110   !
+120   ! B.C.G.  2/4/93
+130   !
+140   ASSIGN @Dvm TO 723
+150   !
+160   !
+170   Nrdgs=100
+180   ALLOCATE REAL Rdgs(1:Nrdgs)
+190   !
+200   CLEAR @Dvm
+210   OUTPUT @Dvm;"*RST"
+220   !
+230   FOR I=1 TO Nrdgs
+240    GOSUB Ocomp
+250    PRINT Rdgs(I)
+260   NEXT I
+270   GOSUB Stats
+280   PRINT 
+290   PRINT "LARGEST RDG:";Upper
+300   PRINT "AVERAGE RDG:";Avg;"  SDEV:";Sdev
+310   PRINT "SMALLEST RDG:";Lower
+320   PRINT "PK TO PK ERR:";Upper-Lower
+330   STOP
+340   !
+350 Ocomp:  !
+360   !
+370   ! The following subroutine will make a four wire ohm
+380   ! measurement with the 34401A DVM.  The firmware must
+390   ! be rev 3.  This program is only good for four wire
+400   ! measurements.
+410   Settling_delay=1
+420   !
+430   ! Switch to two wire mode to set internal state variables
+440   !
+450   OUTPUT @Dvm;"CONF:RES 10000,MIN;:DIAG:POKE -2,4281,0"
+460   WAIT Settling_delay
+470   !
+480   ! Then perform 4 wire Ohm measurement with current source on
+490   !
+500   OUTPUT @Dvm;"MEAS:FRES? 10000,MIN"
+510   ENTER @Dvm;Isrc_on
+520   !
+530   ! Open front end relay
+540   !
+550   OUTPUT @Dvm;"DIAG:POKE -2,4281,4"
+560   !
+570   ! Force front end conf to change (internal code reasons)
+580   !
+590   OUTPUT @Dvm;"DIAG:POKE -2,3512,0"
+600   !
+610   ! Force front end conf to be sent
+620   !
+630   OUTPUT @Dvm;"DIAG:POKE 1,0,0"
+640   WAIT Settling_delay
+650   !
+660   ! Perform 4 wire measurement with current source off
+670   !
+680   OUTPUT @Dvm;"READ?"
+690   ENTER @Dvm;Isrc_off
+700   !
+710   Rdgs(I)=Isrc_on-Isrc_off
+720   RETURN 
+730   !
+740 Stats:  !
+750   !
+760   Avg=SUM(Rdgs)/Nrdgs
+770   Sum_res=0
+780   FOR I=1 TO Nrdgs
+790    Sum_res=Sum_res+(Rdgs(I)-Avg)^2
+800   NEXT I
+810   Lower=MIN(Rdgs(*))
+820   Upper=MAX(Rdgs(*))
+830   Sdev=SQRT(Sum_res/Nrdgs)
+840   RETURN 
+850   END
+
+LARGEST RDG: 5000.9528 
+AVERAGE RDG: 5000.943014  SDEV: .00264253741695 
+SMALLEST RDG: 5000.9378 
+PK TO PK ERR: .0149999999994 
+
+ 5000.9421 
+ 5000.9439 
+ 5000.9424 
+ 5000.9452 
+ 5000.9409 
+ 5000.9406 
+ 5000.943 
+ 5000.9438 
+ 5000.9442 
+ 5000.9443 
+ 5000.9429 
+ 5000.9528 
+ 5000.9418 
+ 5000.9378 
+ 5000.943 
+ 5000.9427 
+ 5000.9491 
+ 5000.9447 
+ 5000.948 
+ 5000.9452 
+ 5000.9429 
+ 5000.9405 
+ 5000.9421 
+ 5000.9426 
+ 5000.9487 
+ 5000.9444 
+ 5000.9401 
+ 5000.9402 
+ 5000.941 
+ 5000.9456 
+ 5000.9438 
+ 5000.9411 
+ 5000.942 
+ 5000.9442 
+ 5000.9417 
+ 5000.9433 
+ 5000.9417 
+ 5000.9414 
+ 5000.9439 
+ 5000.9409 
+ 5000.9451 
+ 5000.9447 
+ 5000.9487 
+ 5000.9429 
+ 5000.9405 
+ 5000.9446 
+ 5000.9433 
+ 5000.9434 
+ 5000.9405 
+ 5000.9424 
+ 5000.9432 
+ 5000.9435 
+ 5000.9444 
+ 5000.9439 
+ 5000.9412 
+ 5000.9417 
+ 5000.9425 
+ 5000.9416 
+ 5000.9431 
+ 5000.9426 
+ 5000.9419 
+ 5000.9406 
+ 5000.9412 
+ 5000.9428 
+ 5000.9438 
+ 5000.9397 
+ 5000.9425 
+ 5000.9434 
+ 5000.9436 
+ 5000.9422 
+ 5000.9396 
+ 5000.9412 
+ 5000.9441 
+ 5000.9415 
+ 5000.9466 
+ 5000.9444 
+ 5000.9428 
+ 5000.9471 
+ 5000.9385 
+ 5000.95 
+ 5000.945 
+ 5000.9429 
+ 5000.9423 
+ 5000.9435 
+ 5000.9526 
+ 5000.9394 
+ 5000.9438 
+ 5000.9409 
+ 5000.941 
+ 5000.9425 
+ 5000.9432 
+ 5000.9398 
+ 5000.9441 
+ 5000.9391 
+ 5000.9391 
+ 5000.94 
+ 5000.9392 
+ 5000.9426 
+ 5000.9443 
+ 5000.9443 
+
+

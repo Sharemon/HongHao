@@ -1,0 +1,27 @@
+1     ! This program will configure the HP 34420A for fast DC 
+2     ! voltage measurements.             CLD  12 March 1996
+10    ASSIGN @Nvm TO 722                ! assign I/O path to address 722 
+20    DIM Rdgs(1:500)                   ! dimension array
+30    OUTPUT @Nvm;"*RST"                ! reset the meter
+40    OUTPUT @Nvm;"CONF:VOLT:DC 0.1,DEF"! configure for range, resolution 
+50    OUTPUT @Nvm;"VOLT:DC:NPLC 0.02"   ! set integration time
+60    OUTPUT @Nvm;"TRIG:DEL 0"          ! set minimum trigger delay 
+70    OUTPUT @Nvm;"OUTP:STAT OFF"       ! turn chart out off
+80    OUTPUT @Nvm;"INP:FILT:STAT OFF"   ! turn filters off
+90    OUTPUT @Nvm;"TRIG:COUN 500"       ! accept 500 triggers
+100   OUTPUT @Nvm;"TRIG:SOUR IMM"       ! select immediate trigger source 
+110   OUTPUT @Nvm;"DISP:STAT OFF"       ! turn display off
+120   OUTPUT @Nvm;"*OPC?"               ! send "1" to buffer when complete 
+130   ENTER @Nvm;I                      ! read value from bus
+140   Begi=TIMEDATE                     ! begin timing
+150   OUTPUT @Nvm;"INIT"                ! initiate measurement
+160   OUTPUT @Nvm;"*OPC?"               ! send "1" to buffer when complete 
+170   ENTER @Nvm;I                      ! read value from bus
+180   Fini=TIMEDATE                     ! finished timing
+190   OUTPUT @Nvm;"FETCH?"              ! transfer readings to output buffer 
+200   ENTER @Nvm;Rdgs(*)                ! read values from bus
+210   PRINT "TIME FOR 500 READINGS:  ";Fini-Begi;" seconds"
+220   PRINT "READING RATE:  ";500/(Fini-Begi);" readings/second" 
+230   END
+
+

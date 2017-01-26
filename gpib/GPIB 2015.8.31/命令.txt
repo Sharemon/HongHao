@@ -1,0 +1,2 @@
+﻿143ҳ
+:VOLTage:DC:RANGe:UPPer 1000 设置量程

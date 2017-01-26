@@ -1,0 +1,62 @@
+IMPORTANT NOTE:  This program describes an UNSUPPORTED CAPABILITY of the 
+Agilent 34401 Multimeter.  Agilent does not warrant or support the 
+performance or use of this feature in any manner.
+
+Some customers want to measure lower ACI than the 1 A range allows.  The
+lowest specified measurement on the 1 A range is 1% of range, or 10 mA
+(see footnote 4 in data sheet).
+ 
+The code below enables a hidden 10 mA ACI range.  
+ 
+------------------------------------------------------------------------
+ 
+10    !
+20    !
+30    ! The following program makes several ACI readings using
+40    ! the undocumented 10 mA range.
+50    !
+60    ! The current range is enabled using the BUS and a DIAG:POKE 25,0,1
+70    ! command.  Once enabled, the range can be accessed over the
+80    ! BUS or from the front panel.  You can still access the range
+90    ! even if power is cycled.  To disable the range you need to
+100   ! to send a DIAG:POKE 25,0,0 command.
+110   !
+120   ! BCG 1/6/93
+130   !
+140   Nrdgs=10   ! NUMBER OF RDGS
+150   !
+160   ALLOCATE Rdgs(1:Nrdgs)
+170   !
+180   ASSIGN @Dvm TO 723
+190   !
+200   ! DIG OUT PREVIOUS ERRORS
+210   !
+220   CLEAR 7
+230   REPEAT
+240    OUTPUT @Dvm;"SYST:ERR?"
+250    ENTER @Dvm;A,A$
+260    PRINT A,A$
+270   UNTIL A=0
+280   PRINT "-----------------------------------------------------------"
+290   !
+300   ! SET UP 34401A
+310   !
+320   CLEAR @Dvm
+330   OUTPUT @Dvm;"*RST"
+340   WAIT .5
+350   !
+360   !
+370   OUTPUT @Dvm;"DIAG:POKE 25,0,1"      ! Allows access to 10 mA
+380   OUTPUT @Dvm;"CONF:CURR:AC .01,MIN"  ! ACI from the bus and
+390   OUTPUT @Dvm;"TRIG:COUN";Nrdgs       ! front panel.
+400   OUTPUT @Dvm;"READ?"
+410   !
+420   FOR I=1 TO Nrdgs
+430    ENTER @Dvm USING "#,K";Rdgs(I)
+440    PRINT I,Rdgs(I)
+450    DISP I,Rdgs(I)
+460   NEXT I
+470 ! OUTPUT @Dvm;"DIAG:POKE 25,0,0"  ! DISABLE 10 mA RANGE
+480   PRINT "-----------------------------------------------------------"
+490   END
+

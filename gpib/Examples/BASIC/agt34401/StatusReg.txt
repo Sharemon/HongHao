@@ -1,0 +1,46 @@
+10 REAL Aver,Min_rdg,Max_rdg
+20 INTEGER Val,Hpib,Mask,Task
+21 ON TIMEOUT 7,2 GOTO Timeouterror
+30 ASSIGN @Dmm TO 722
+40 CLEAR 7 ! Clear HP-IB and dmm
+50 OUTPUT @Dmm;"*RST"  ! Reset dmm
+60 OUTPUT @Dmm;"*CLS"  ! Clear dmm status registers
+70 OUTPUT @Dmm;"*ESE 1"  ! Enable "operation complete" bit to set
+80 OUTPUT @Dmm;"*SRE 32"  ! Enable "standard event" bit in status byte
+90 OUTPUT @Dmm;"*OPC?"  ! Assure synchronization
+100 ENTER @Dmm;Val
+110 !
+120 ! Configure the multimeter to make measurements
+130 !
+140 OUTPUT @Dmm;"CONF:VOLT:DC 10"  ! Set dmm to 10 volt dc range
+150 OUTPUT @Dmm;"VOLT:DC:NPLC 10"  ! Set the integration time to 10 PLCs
+160 OUTPUT @Dmm;"TRIG:COUN 100"  ! Dmm will accept 100 triggers
+170 OUTPUT @Dmm;"CALC:FUNC AVER;STAT ON"  ! Select min-max and enable math
+180 OUTPUT @Dmm;"INIT"  ! Place dmm in "wait-for-trigger" state
+190 OUTPUT @Dmm;"*OPC"  ! Set "operation complete" bit in standard event
+200 !
+210 Hpib=7
+220 ON INTR Hpib GOSUB Read_data
+230 Mask=2 ! Bit 1 is SRQ
+240 ENABLE INTR Hpib;Mask ! Enable SRQ to interrupt the program
+250 !
+260 ! Execute other tasks while waiting for data
+270 !
+280 Task=1
+290 WHILE Task=1
+300 DISP "Taking Readings"
+310 WAIT .5
+320 DISP ""
+330 WAIT .5
+340 END WHILE
+350 DISP "AVE = ";Aver;" MIN = ";Min_rdg;" MAX = ";Max_rdg
+360 STOP
+370 !
+380 Read_data: !
+390 OUTPUT @Dmm;"CALC:AVER:AVER?;MIN?;MAX?"  ! Read the average, min, and max
+400 ENTER @Dmm;Aver,Min_rdg,Max_rdg
+410 OUTPUT @Dmm;"*CLS"  ! Clear dmm status registers
+420 Task=0
+430 RETURN
+431 Timeouterror: DISP "Timeout occured."
+440 END

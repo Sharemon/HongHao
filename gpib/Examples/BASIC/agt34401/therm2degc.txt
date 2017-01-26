@@ -1,0 +1,20 @@
+10    INPUT "VALUE?",R
+20    A=.001286
+30    B=.00023595
+40    C=9.41E-8
+50    Temp=1/(A+LOG(R)*(B+(LOG(R))^2*C))-273.16
+70    PRINT "Temperature is ";Temp
+80    END
+
+To test the program input 5000 and you should get 25C.
+This program is useful over a temperature range of 
+-80 to 150C.
+
+The coefficients in lines 20,30,40 may be change for different
+thermistors.  For example a thermistor  exhibiting 2252 ohms
+at 15C such as a type 4404 would have coefficients of:
+.0014684
+.00023827
+.00000010112
+Consult the manufacturer's data sheet for coefficients.
+

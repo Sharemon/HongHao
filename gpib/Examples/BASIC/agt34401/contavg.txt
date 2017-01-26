@@ -1,0 +1,22 @@
+This program performs a continuous running average of readings
+
+
+10     ASSIGN @Dmm TO 1427 
+20     OUTPUT @Dmm;"*RST" 
+30     OUTPUT @Dmm;"TRIG:SOUR IMM" 
+40     OUTPUT @Dmm;"TRIG:COUN INF" 
+50     OUTPUT @Dmm;"SENS:FUNC 'VOLT:DC'" 
+60     OUTPUT @Dmm;"SENS:VOLTAGE:DC:RANG 10" 
+70     OUTPUT @Dmm;"SENS:VOLT:DC:RES MAX" 
+80     OUTPUT @Dmm;"CALC:FUNC AVER" 
+90     OUTPUT @Dmm;"CALC:STAT ON" 
+100    OUTPUT @Dmm;"DATA:FEED RDG_STORE, ''" 
+110    OUTPUT @Dmm;"INIT" 
+120    WAIT 2 
+130    CLEAR 1427 
+140    OUTPUT @Dmm;"CALC:AVER:AVER?" 
+150    ENTER @Dmm;Average 
+160    PRINT "Average is =";Average 
+170    GOTO 110 
+180    END 
+  

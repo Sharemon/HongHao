@@ -1,0 +1,40 @@
+10  !
+20  ! This program configures the meter for voltage masurements on two
+30  ! input channels. The channels are set to different ranges and
+40  ! resolutions to show the independence of the settings for each channel.
+50  !
+60     REAL Rdg_ch1,Rdg_ch2,Null_chl,Null_ch2              ! Dimension variables
+70     CLEAR 7                                             ! Clear interface - send "device clear"
+80     ASSIGN @Meter TO 722                                ! Assign I/O path to address 722
+90     OUTPUT @Meter;"*RST"                                ! Reset the meter
+100    OUTPUT @Meter;"*OPC?"                              ! Send "1" to output buffer when complete
+110    ENTER @Meter;Value! Enter value
+120  !
+130  ! Configure channel 1 for dc volts, 1 volt range with 10 mV resolution
+140  ! Configure channel 2 for dc volts, 1 mV range with least resolution
+150    OUTPUT @Meter;"CONF:VOLT:DC 1,.01,(@FRON1);:CONF:VOLT:DC .001,MAX,(@FRON2)"
+160 !
+170    OUTPUT @Meter;"ROUT:TERM FRON1"                     ! Select channel 1
+180    OUTPUT @Meter;"READ?"                               ! Take reading; send to output buffer
+190    ENTER @Meter;Rdg_chl                                 ! Enter reading
+200  !
+210    OUTPUT @Meter;"SENS1:VOLT:DC:NULL ON"               ! Enable null on channel 1
+220    OUTPUT @Meter;"SENS1:VOLT:DC:NULL:VAL ";Rdg_ch1     ! Store value in register
+230  !
+240    OUTPUT @Meter;"READ?"                               ! Take nulled reading; send to output buffer
+250    ENTER @Meter;Null_ch1                               ! Enter nulled reading
+260    PRINT Null_ch1                                     ! Print nulled reading
+270  !
+280    OUTPUT @Meter;"ROUT:TERM FRON2"                     ! Select channel 2
+290    OUTPUT @Meter;"READ?"                               ! Take reading; send to output buffer
+300    ENTER @Meter;Rdq_ch2                                ! Enter reading
+310  !
+320    OUTPUT @Meter;"SENS2:VOLT:DC:NULL ON"               ! Enable null on channel 2
+330    OUTPUT @Meter;"SENS2:VOLT:DC:NULL:VAL ";Rdg_ch2     ! Store value in register
+340  !
+350    OUTPUT @Meter;"READ?"                               ! Take nulled reading; send to output buffer
+360    ENTER @Meter;Null_ch2                               ! Enter nulled reading
+370    PRINT Null_ch2                                      ! Print nulled reading
+380  !
+390    END
+

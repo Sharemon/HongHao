@@ -1,0 +1,69 @@
+10 !
+20 ! This program configures the meter to make multiple dc voltage measurements
+30 ! using an external trigger. The "Operation Complete" bit in the Standard
+40 ! Event Register is used to determine when the trigger is received and
+50 ! generates an SRQ. This program also shows the use of math scaling.
+60 !
+70     INTEGER Value,Task                             ! Dimension variables
+80     CLEAR 7                                        ! Clear interface - send "device clear"
+90     ASSIGN @Meter TO 722                           ! Assign I/O path to address 722
+100    COM @Meter                                     ! Use same address in subprogram
+110    OUTPUT @Meter;"*RST"                           ! Reset the meter
+120    OUTPUT @Meter;"*CLS"                           ! Clear status registers
+130    OUTPUT @Meter;"*OPC?"                          ! Send "1" to output buffer when reset complete
+140    ENTER @Meter;Value                             ! Enter value
+150  !
+160  ! Configure the Status Register system to generate an SRQ when the
+170  ! "Operation Complete" bit is set in the Standard Event Register
+180  !
+190    OUTPUT @Meter;"*SRE 32"                        ! Enable "Standard Event" bit in Status Byte
+200                                                   ! to pull the IEEE-488 SRQ line
+210    OUTPUT @Meter;"*ESE 1"                         ! Enable "Operation Complete" to set
+220                                                   ! "Standard Event" bit in Status Byte
+230 !
+240 ! Configure the HP-IB interrupt system to generate an SRQ
+250 !
+260    Hpib=7                                         ! HP-IB select code is "7"
+270    ON INTR Hpib CALL Read_data                    ! Call subprogram when operation complete
+280    Mask=2                                         ! Bit 1 is SRQ
+290    ENABLE INTR Hpib;Mask                          ! Enable SRQ to interrupt program
+300  !
+310    OUTPUT @Meter;"SENS:FUNC 'VOLT:DC'"            ! Select dc volts on channel 1 (default)
+320    OUTPUT @Meter;"SENS:VOLT:DC:RANG 10"           ! Select 10 volt range
+330    OUTPUT @Meter;"SENS:VOLT:DC:NPLC 10"           ! Select 10 power line cycles
+340    OUTPUT @Meter;"CALC:FUNC SCAL"                 ! Select math scaling function
+350    OUTPUT @Meter;"CALC:STAT ON"                   ! Turn math scaling on
+360    OUTPUT @Meter;"CALC:SCAL:GAIN 0.001"           ! Set the gain value (1 mV)
+370    OUTPUT @Meter;"CALC:SCAL:OFFS 0.5"             ! Set the offset value (50 mV)
+380  !
+390    OUTPUT @Meter;"SAMP:COUN 5"                    ! Take 5 reading per trigger
+400    OUTPUT @Meter;"TRIG:SOUR EXT"                  ! Select external trigger source
+410    OUTPUT @Meter;"INIT"                           ! Initiate measurement, wait for trigger,
+420                                                   ! and send readings to internal memory
+430    OUTPUT @Meter;"*OPC"                           ! Set "Operation Complete" bit in
+440                                                   ! Standard Event Register when complete
+450 !
+460                                                   ! WAit for "Operation Camplete"
+470  !
+480    Task=1
+490    WHILE Task=1
+500      DISP "Reading "
+510      WAIT .5
+520      DISP " "
+530      WAIT .5
+540    END WHILE 
+550  !
+560    OFF INTR Hpib                                  ! Disable interrupts
+570    END
+580  !
+590  ! After SRQ is generated, transfer the readings to the output buffer and print
+600  !
+610   SUB Read_data                                   ! Subprogram is called after INIT complete and trigger is received
+611    DIM Rdgs(1:5)                                  ! Dimension array for readings
+612    COM @Meter                                     ! Use same address as in main program
+613    OUTPUT @Meter;"FETC?"                          ! Transfer readings to output buffer
+614    ENTER @Meter;Rdgs(*)                           ! Enter readings
+615    PRINT Rdgs(*)                                  ! Print readings
+616    STOP
+617    SUBEND
+

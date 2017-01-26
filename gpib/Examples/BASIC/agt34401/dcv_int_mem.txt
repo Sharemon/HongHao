@@ -1,0 +1,56 @@
+
+10    !
+20    !
+30    ! The following program configures the 34401A
+40    ! for a over 1000 rdgs/sec to memory!  The
+50    ! *OPC? command will not return anything until
+60    ! the DVM has complete all the commands that
+70    ! have been buffered.  Sending the *OPC? command
+80    ! ensures that the dvm and computer are in sync.
+90    !
+100   ! b.g. 8/1/93
+110   !
+120   !
+130   Nrdgs=500   ! Nrdgs can any integer from 1 to 512
+140   !
+150   ALLOCATE REAL Rdgs(1:Nrdgs)
+160   !
+170   ASSIGN @Dvm TO 723
+180   !
+190   ! CLEAR AND RESET DVM
+200   !
+210   CLEAR @Dvm
+220   OUTPUT @Dvm;"*RST"
+230   !
+240   ! CONFIGURE DVM FOR FASTEST READING RATE
+250   !
+260   OUTPUT @Dvm;"DISP OFF"            ! Turn display off
+270   OUTPUT @Dvm;"CONF:VOLT:DC 10,MAX" ! Set to DCV, 10 V
+280                                     !  range, lowest
+290                                     !  resolution
+300   OUTPUT @Dvm;"TRIG:DEL MIN"        ! Set delay to 0
+310   OUTPUT @Dvm;"TRIG:COUN";Nrdgs     ! Number of rdgs/trig
+320   OUTPUT @Dvm;"*OPC?"               ! Wait till all the
+330   ENTER @Dvm;Tmp$                   !  above commands
+340                                     !  are complete
+350   !
+360   ! TRIGGER DVM AND DETERMINE EXECUTION TIME
+370   !
+380   T0=TIMEDATE
+390    OUTPUT @Dvm;"INIT"            ! Start putting rdgs
+400    OUTPUT @Dvm;"*OPC?"           !  in memory -- wait
+410    ENTER @Dvm;Tmp$               !  until all rdgs are
+420   T1=TIMEDATE                    !  in memory
+430   OUTPUT @Dvm;"FETCH?"           ! Get rdgs from memory
+440   ENTER @Dvm;Rdgs(*)
+450   !
+460   ! PRINT RESULTS
+470   !
+480   PRINT "TIME FOR: ";Nrdgs;"RDGS: ";(T1-T0)
+490   PRINT "READING RATE: ";Nrdgs/(T1-T0)
+500   PRINT
+510   FOR I=1 TO 10
+520    PRINT I,Rdgs(I)
+530   NEXT I
+540   END
+

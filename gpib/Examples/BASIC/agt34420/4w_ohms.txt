@@ -1,0 +1,19 @@
+10    !
+20    ! This program configures the meter for a 4-wire ohms measurement on
+30    ! Channel 1 using the MEAS command.
+40  !
+50     REAL Value,Rdg                        ! Dimension real variables
+60     CLEAR 7                               ! Clear interface - send "device clear"
+70     ASSIGN @Meter TO 722                  ! Assign I/O path to address 722
+80  !
+90     OUTPUT @Meter;"*RST"                  ! Reset the meter
+100    OUTPUT @Meter;"*OPC?"                 ! Send "1" to output buffer when reset complete
+110    ENTER @Meter;Value                    ! Enter value
+120  !
+130  ! Select 4-wire ohms on the 10 ohm range with the least resolution;
+140  !
+150    OUTPUT @Meter;"MEAS:FRES? 10,MAX"
+160    ENTER @Meter;Rdg                      ! Enter reading
+170    PRINT Rdg                             ! Print reading
+180    END
+

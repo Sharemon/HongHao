@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[StatReg_SRQ.vbp]
+SCC_Aux_Path = "\\Lvccafs1\vss\"
+SCC_Project_Name = "$/BenchLinkXL/Porky/Examples/VB 60/Stat_Reg_SRQ", TPOAAAAA

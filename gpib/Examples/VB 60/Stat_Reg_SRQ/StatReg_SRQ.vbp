@@ -1,0 +1,35 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINNT\System32\stdole2.tlb#OLE Automation
+Reference=*\G{AFF8D8E7-CE0D-11D3-98BB-00108301CB39}#1.0#0#C:\Program Files\Common Files\Agilent\IOLibraries\AgtIOUtils.dll#Agilent I/O Manager for Agilent I/O Automation Servers
+Form=StatReg.frm
+Object={1C98F15C-068A-11D4-98C2-00108301CB39}#2.0#0; agt3494A.ocx
+Startup="frmStatReg"
+HelpFile=""
+Command32=""
+Name="StatReg_SRQ"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="Agilent Technologies"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1
